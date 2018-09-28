@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 mongoose.set('debug', true);
 
 
-mongoose.connect('mongodb://localhost/confess-api', { useNewUrlParser: true } )
+mongoose.connect(process.env.DATABASEURL || 'mongodb://localhost/confess-api', { useNewUrlParser: true } )
 
 mongoose.Promise = Promise;
 
